@@ -179,7 +179,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -983393647
   m_SortingLayer: 3
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 517931f9442db7b49ad89f833fc63db8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -200,8 +200,8 @@ Transform:
   m_GameObject: {fileID: 263896475}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 769.8428, y: 108.49719, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 582, y: 92, z: 0}
+  m_LocalScale: {x: 43.099323, y: 43.099323, z: 43.099323}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -291,13 +291,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401096759}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0.72478306, y: -0, z: -0, w: -0.6889771}
+  m_LocalPosition: {x: 502, y: 250, z: 0}
+  m_LocalScale: {x: 1.7513, y: 1.7513, z: 1.7513}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -267.098, y: 0, z: 0}
 --- !u!1 &675121803
 GameObject:
   m_ObjectHideFlags: 0
@@ -332,8 +332,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 68.465935, y: 102.0277}
-  m_SizeDelta: {x: 63.0681, y: 254.0554}
+  m_AnchoredPosition: {x: 68.465935, y: 138.108}
+  m_SizeDelta: {x: 800, y: 572.165}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &675121805
 MonoBehaviour:
@@ -357,23 +357,19 @@ MonoBehaviour:
       m_Calls: []
   m_text: "Welcome to Barnyard Breakout, a puzzle-filled adventure where wits are
     your wings!\r\nYou are Cluckston, a clever chicken trapped in a seemingly ordinary
-    barnyard. But behind this fence lies a challenge that no mere farm animal could
+    barn.\nBut behind this fence lies a challenge that no mere farm animal could
     overcome\u2026 except you. The barn door is locked tight, and freedom seems far
-    away. But here\u2019s the twist: your escape depends not on strength or speed,
-    but on solving the riddles posed by your fellow barnyard animals.\r\nEach animal
-    holds a clue, a puzzle, or a challenge. The sly cow, the tricky pig, the wise
-    old sheep\u2014they all stand between you and freedom. Crack their riddles, outsmart
-    their games, and inch closer to the barn doors with every step. Only by using
+    away. \n\nBut here\u2019s the twist: your escape depends not on strength or speed,
+    but on finding golden eggs hidden by other barnyard animals.\r\n\nOnly by using
     your quick thinking and clever solutions will you break free.\r\nThe path to
     freedom isn\u2019t easy, and the sun is setting on the farm. Can you solve the
-    barnyard\u2019s mysteries and make your grand escape before nightfall?\r\n\r\nObjective:\r\nSolve
-    riddles and puzzles posed by different animals to unlock new areas and escape
-    the barnyard. Think carefully, use clues, and plan your moves as you flap your
-    way to freedom!\r\n\r\nControls:\r\nMove: Arrow Keys\r\nJump: spacebar\r\nInteract/Answer:
-    Type Text Using Keyboard\r\nSubmit Text: Enter\r\n"
+    barnyard\u2019s mysteries and make your grand escape before nightfall?\r\n\r\nObjective:\r\nFind
+    all the eggs to escape from becoming being dinner! \n\r\nControls:\r\nMove: Arrow
+    Keys\r\nJump: spacebar\r\nInteract/Answer: Type Text Using Keyboard\r\nSubmit
+    Text: Enter\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 42df1c7856584b6b8db9a509b6b10074, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -397,8 +393,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 16
-  m_fontSizeBase: 16
+  m_fontSize: 36
+  m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -480,10 +476,10 @@ RectTransform:
   - {fileID: 675121804}
   m_Father: {fileID: 1271560916}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 405.39, y: -224.89}
-  m_SizeDelta: {x: 810.78, y: 449.77}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -5.7020264, y: 62.255005}
+  m_SizeDelta: {x: 709.185, y: 475.789}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &929537560
 MonoBehaviour:
@@ -498,14 +494,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.05882353, g: 0.059495885, b: 0.06666667, a: 1}
+  m_Color: {r: 0.078431375, g: 0.3529412, b: 0.78039217, a: 0.56078434}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: a9ba016e56609914eb4327af8e27c43f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -574,7 +570,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1980, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -591,7 +587,7 @@ Canvas:
   m_GameObject: {fileID: 1271560912}
   m_Enabled: 1
   serializedVersion: 3
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_Camera: {fileID: 0}
   m_PlaneDistance: 100
   m_PixelPerfect: 0

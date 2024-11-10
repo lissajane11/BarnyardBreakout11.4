@@ -11,6 +11,8 @@ TagManager:
   - Jumpable
   - Egg
   - Coin
+  - Pause
+  - Settings
   layers:
   - Default
   - TransparentFX
