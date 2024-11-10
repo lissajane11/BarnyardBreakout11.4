@@ -8,6 +8,9 @@ TagManager:
   - Background
   - NPC
   - Audio
+  - Jumpable
+  - Egg
+  - Coin
   layers:
   - Default
   - TransparentFX

@@ -1,63 +1,53 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
-    // Variables for movement
-    public float moveSpeed = 5f;
-    public float jumpForce = 12f;
-    private bool isGrounded = true;
+    private float horizontal;
+    private float speed = 8f;
+    private float jumpingPower = 25f;
+    private bool isFacingRight = true;
 
-    // Components
-    private Rigidbody2D rb;
-    private SpriteRenderer spriteRenderer;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        rb = GetComponent<Rigidbody2D>();
-        spriteRenderer = GetComponent<SpriteRenderer>();
-    }
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundLayer;
 
-    // Update is called once per frame
     void Update()
     {
-        Move();
-        Jump();
-    }
+        horizontal = Input.GetAxisRaw("Horizontal");
 
-    void Move()
-    {
-        // Get horizontal input
-        float moveInput = Input.GetAxisRaw("Horizontal");
-
-        // Set the velocity for movement along the x-axis
-        rb.velocity = new Vector2(moveInput * moveSpeed, rb.velocity.y);
-
-        // Flip sprite based on movement direction
-        if (moveInput > 0)
-            spriteRenderer.flipX = false;
-        else if (moveInput < 0)
-            spriteRenderer.flipX = true;
-    }
-
-    void Jump()
-    {
-        // Jump when grounded and "Jump" button (usually spacebar) is pressed
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && IsGrounded())
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpForce);
-            isGrounded = false;
+            rb.velocity = new Vector2(rb.velocity.x, jumpingPower);
+        }
+
+        if (Input.GetButtonUp("Jump") && rb.velocity.y > 0f)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, rb.velocity.y * 0.5f);
+        }
+
+        Flip();
+    }
+
+    private void FixedUpdate()
+    {
+        rb.velocity = new Vector2(horizontal * speed, rb.velocity.y);
+    }
+
+    private bool IsGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
+
+    private void Flip()
+    {
+        if (isFacingRight && horizontal < 0f || !isFacingRight && horizontal > 0f)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
         }
     }
 
-    // Detect when the player is grounded
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = true;
-        }
-    }
 }
